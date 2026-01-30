@@ -22,14 +22,10 @@ jobs:
         run: |
           ./build.sh
 
-      - name: Create toolchain tarball
-        run: |
-          cd "$HOME/x-tools" && tar czvf "arm-frosted-eabi-latest.tgz" "arm-frosted-eabi" && cd -
-
       - name: Upload Toolchain
         uses: actions/upload-artifact@v4
         with:
           name: arm-frosted-eabi GNU Gcc toolchain
           path: |
-            $HOME/x-tools/
+            ~/x-tools/arm-frosted-eabi
 
