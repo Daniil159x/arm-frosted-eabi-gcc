@@ -1,10 +1,7 @@
 name: Build arm-frosted-eabi toolchain from sources
 
 on:
-  push:
-    branches: [ 'master', 'release/**' ]
-  pull_request:
-    branches: [ '*' ]
+  workflow_dispatch:
 
 jobs:
   build-toolchain:
